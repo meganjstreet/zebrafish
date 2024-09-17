@@ -1,0 +1,20 @@
+<%= simple_form_for (project) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :campaign %>
+  <%= f.input :media_type %>
+  <%= f.input :client %>
+  <%= f.input :featured, as: :boolean %>
+  <%= f.input :details %>
+  <%= f.input :summary %>
+  <%= f.input :services_rendered %>
+  <%= f.input :director %>
+  <%= f.input :photographer %>
+  <%= f.input :videographer %>
+  <%= f.input :producer %>
+  <%= f.association :category, collection: Category.all, label: "Pick a category", prompt: "Select a Category" %>
+  <%= f.input :project_images, as: :file, input_html: { multiple: true } %>
+  <%= f.input :main_image, as: :file %>
+  <%= f.input :client_logo, as: :file %>
+  <%= f.input :video_url %>
+  <%= f.button :submit, class: "btn btn-primary text-white" %>
+<% end %>

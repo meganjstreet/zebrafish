@@ -1,0 +1,24 @@
+.show-featured-img {
+  position: relative;
+
+  .show-project-info {
+    position: absolute;
+    bottom: 64px;
+    left: 64px;
+    color: white;
+  }
+
+
+  .show-project-client {
+    font-size: 2.5em;
+    margin-bottom: 0;
+    line-height: 1;
+    letter-spacing: 1px;
+  }
+
+  .show-project-name {
+    font-weight: lighter;
+    margin-top: 0;
+    line-height: 1;
+  }
+}

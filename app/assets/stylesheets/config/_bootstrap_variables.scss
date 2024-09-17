@@ -26,3 +26,5 @@ $border-radius-xl:            .5rem;
 $border-radius-xxl:           1rem;
 
 // Override other variables below!
+$carousel-transition-duration:       1s;
+$carousel-transition:                transform $carousel-transition-duration ease-in-out ;

@@ -1,0 +1,18 @@
+<div class="container-project">
+  <div class="show-featured-img">
+    <%= cl_image_tag @project.main_image.key, class: "img-main" %>
+    <div class="show-project-info">
+      <p class="show-project-client"><%= @project.client.upcase %></p>
+      <p class="show-project-name"><%= @project.name %></p>
+      <p class="show-project-campaign"><%= @project.campaign %></p>
+    </div>
+  </div>
+  <div class="card-home-cards" data-controller="masonry">
+    <div class="card-home-sizer"></div>
+    <% @project.project_images.each do |photo| %>
+      <div class="card-home-project">
+        <%= cl_image_tag photo.key %>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+.container-home-cards {
+  a {
+    text-decoration: none;
+  }
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+}
+
+
+
+.container-project {
+  width: 100%;
+
+  .img-main {
+    width: 100%;
+    height: calc(100vh - 60px);
+    object-fit: cover; /* Ensures the image covers the container without distortion */
+    object-position: center;
+    margin-bottom: 10px;
+  }
+}
+
+.container-grid-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  img {
+    width: 100%;
+  }
+}

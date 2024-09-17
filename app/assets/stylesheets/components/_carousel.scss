@@ -1,0 +1,32 @@
+.carousel {
+  position: relative;
+
+  .carousel-control-previous {
+    position: absolute;
+    bottom: 80px;
+    right:220px;
+    background-color: transparent;
+    border: none;
+  }
+  .carousel-control-nextb {
+    position: absolute;
+    bottom: 80px;
+    right: 32px;
+    background-color: transparent;
+    border: none;
+  }
+}
+.carousel-item {
+  position: relative;
+
+  .carousel-info {
+    color: white;
+    position: absolute;
+    bottom: 64px;
+    right: 96px;
+    border: 2px solid white;
+    padding: 8px 16px;
+  }
+
+
+}

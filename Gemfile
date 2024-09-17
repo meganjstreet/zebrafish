@@ -32,7 +32,7 @@ gem "tzinfo-data", platforms: %i[ mswin mswin64 mingw x64_mingw jruby ]
 gem "bootsnap", require: false
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
-# gem "image_processing", "~> 1.2"
+gem "image_processing", "~> 1.2"
 
 gem "bootstrap", "~> 5.2"
 gem "devise"
@@ -40,6 +40,14 @@ gem "autoprefixer-rails"
 gem "font-awesome-sass", "~> 6.1"
 gem "simple_form", github: "heartcombo/simple_form"
 gem "sassc-rails"
+
+# custom added gems
+gem "cloudinary"
+gem 'mini_magick'
+gem 'ruby-vips', '~> 2.2', '>= 2.2.2'
+gem 'masonry-rails'
+
+
 
 group :development, :test do
   gem "dotenv-rails"

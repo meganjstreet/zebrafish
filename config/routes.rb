@@ -13,4 +13,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+  resources :projects, only: [:show, :new, :create]
+  resources :categories, only: [:show, :new, :create]
+  get 'pages/partials/:name', to: 'pages#partials'
 end

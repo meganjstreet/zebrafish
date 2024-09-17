@@ -1,0 +1,49 @@
+.carousel-img {
+  width: 100%; /* Ensures the image takes the full width of the container */
+  height: calc(100vh - 72px); /* Set a fixed height that works for your landscape images */
+  object-fit: cover; /* Ensures the image covers the container without distortion */
+  object-position: center; /* Centers the image in the container */
+}
+
+.card-home-cards {
+  display: block; /* Masonry needs block display */
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  padding-top: 0;
+}
+
+.card-home-sizer {
+  width: 32%; /* 1/3rd of the container for 3 equal columns */
+}
+
+.card-home-project {
+  width: 32%; /* Ensure each project also takes up 1/3rd of the container */
+  margin-bottom: 10px;
+
+  position: relative;
+  .home-project-info {
+    position: absolute;
+    bottom: 0;
+    left: 16px;
+    color: white;
+    text-decoration: none;
+
+  }
+}
+
+.home-project-info {
+  .project-name {
+    margin: 0;
+    font-weight: bold;
+  }
+  .project-category {
+    font-weight: 100;
+  }
+}
+
+.card-home-project img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}

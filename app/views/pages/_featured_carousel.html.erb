@@ -1,0 +1,22 @@
+<div id="carouselExample" class="carousel slide">
+  <div class="carousel-inner carousel-container">
+    <div class="carousel-item active">
+      <%= cl_image_tag projects.first.main_image.key, class: "d-block w-100 carousel-img" %>
+      <p class="carousel-info"><%= projects.first.client %><%= projects.first.category.name %></p>
+    </div>
+    <% projects[1..].each do |project| %>
+      <div class="carousel-item">
+        <%= cl_image_tag project.main_image.key, class: "d-block w-100 carousel-img" %>
+        <p class="carousel-info"><%= project.client %> | <%= project.category.name %></p>
+      </div>
+    <% end %>
+  </div>
+  <button class="carousel-control-previous" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-nextb" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
