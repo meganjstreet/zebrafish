@@ -1,16 +1,37 @@
 .navbar {
   justify-content: space-between;
   background: $black;
+  background-color: rgba(0, 0, 0, 0.6);
   color: white;
-  height: 72px;
+  padding: 0px;
+  padding-top: 24px;
+
+
 
   .logo {
-    height: 32px;
+    height: 28px;
     width: auto;
+    align-self: end;
+    padding-bottom: 4px;
+  }
+
+  .navbar-brand {
+    align-self: end;
+    padding: 0px;
+    line-height: 1;
+    padding-bottom: 4px;
+  }
+
+  .navbar-toggler {
+    align-self: end;
+    border: none;
+    padding: 0px;
   }
 
   .offcanvas, .offcanvas-top {
     height: 100vh;
+    background-color: black;
+
   }
 
 }
@@ -39,6 +60,14 @@
     color: white;
     font-weight: lighter;
     font-size: 28px;
+
+  }
+}
+
+.nav-link-white {
+  a {
+    text-decoration: none;
+    color: white;
   }
 }
 

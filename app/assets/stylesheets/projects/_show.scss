@@ -1,5 +1,6 @@
 .show-featured-img {
   position: relative;
+  margin-top: -52px;
 
   .show-project-info {
     position: absolute;
@@ -21,4 +22,8 @@
     margin-top: 0;
     line-height: 1;
   }
+
+}
+.container-video {
+  padding: 32px;
 }

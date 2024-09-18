@@ -1,0 +1,14 @@
+<% content_for :head do %>
+  <meta name="turbo-refresh-method" content="morph">
+  <meta name="turbo-refresh-scroll" content="preserve">
+<% end %>
+
+<div class="home-categories">
+<p><%= link_to "FEATURED", root_path, data: { turbo_frame: :project_grid, turbo_action: :advance  } %></p>
+  <% @categories.each do |category| %>
+    <p><%= link_to category.name.upcase, category, data: { turbo_frame: :project_grid, turbo_action: :advance  } %></p>
+  <% end %>
+</div>
+<%# MASONRY GRID OF FEATURED PROJECTS %>
+<%= render 'projects/grid', projects: @featured_projects %>
+</div>

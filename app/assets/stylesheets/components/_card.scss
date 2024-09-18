@@ -1,9 +1,4 @@
-.carousel-img {
-  width: 100%; /* Ensures the image takes the full width of the container */
-  height: calc(100vh - 72px); /* Set a fixed height that works for your landscape images */
-  object-fit: cover; /* Ensures the image covers the container without distortion */
-  object-position: center; /* Centers the image in the container */
-}
+
 
 .card-home-cards {
   display: block; /* Masonry needs block display */

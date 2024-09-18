@@ -14,7 +14,7 @@
 
   .img-main {
     width: 100%;
-    height: calc(100vh - 60px);
+    height: 100vh;
     object-fit: cover; /* Ensures the image covers the container without distortion */
     object-position: center;
     margin-bottom: 10px;

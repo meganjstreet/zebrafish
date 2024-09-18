@@ -16,4 +16,7 @@ Rails.application.routes.draw do
   resources :projects, only: [:show, :new, :create]
   resources :categories, only: [:show, :new, :create]
   get 'pages/partials/:name', to: 'pages#partials'
+  get 'portfolio', to: 'pages#portfolio', as: 'portfolio'
+  get 'about', to: 'pages#about', as: 'about'
+  get 'media', to: 'pages#media', as: 'media'
 end

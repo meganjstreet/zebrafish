@@ -7,11 +7,14 @@
       <p class="show-project-campaign"><%= @project.campaign %></p>
     </div>
   </div>
+  <div class="container-video">
+<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/<%= @project.video_url %>?controls=0?autoplay=1&loop=1&autopause=0?&amp;h=ae2acfdee2&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+  </div>
   <div class="card-home-cards" data-controller="masonry">
     <div class="card-home-sizer"></div>
     <% @project.project_images.each do |photo| %>
       <div class="card-home-project">
-        <%= cl_image_tag photo.key %>
+        <%= cl_image_tag photo.key %>r
       </div>
     <% end %>
   </div>
