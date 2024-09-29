@@ -1,9 +1,11 @@
-
 import { Controller } from "@hotwired/stimulus";
 
 export default class extends Controller {
   loadPartial(event) {
     event.preventDefault(); // Prevent default link behavior
+
+    // Add bold class
+    event.currentTarget.classList.add("text-bold");
 
     // get partial specific to header
     const url = event.currentTarget.dataset.url;
@@ -28,4 +30,10 @@ export default class extends Controller {
       console.error("Error loading partial:", error);
     });
   }
+
+  unbold(event) {
+    // Remove bold class
+    event.currentTarget.classList.remove("text-bold");
+  }
 }
+

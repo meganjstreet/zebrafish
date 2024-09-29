@@ -14,7 +14,7 @@ export default class extends Controller {
         masonry: {
           columnWidth: '.card-home-sizer'
         },
-        gutter: 10
+        gutter: 20
       });
     });
   }

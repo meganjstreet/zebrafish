@@ -1,6 +1,37 @@
-.carousel {
+.carousel-featured {
   position: relative;
-  margin-top: -52px;
+  margin-top: -58px;
+
+  .carousel-control-prev,
+  .carousel-control-prev-icon,
+  .carousel-control-next,
+  .carousel-control-next-icon {
+    position: absolute;
+    bottom: 5vh;
+  }
+
+
+  .carousel-project-caption {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    position: absolute;
+    bottom: 9vh;
+    right: 12vw;
+    color: #FFFFFF;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 2px solid white;
+    padding: 8px 16px;
+    border-radius: 1px;
+    p {
+      font-weight: 200;
+      margin: 0px;
+    }
+  }
+
+  .carousel-project-caption.fade-in {
+    opacity: 1;
+  }
+
 
   .carousel-img {
     width: 100%; /* Ensures the image takes the full width of the container */
@@ -9,32 +40,15 @@
     object-position: center; /* Centers the image in the container */
   }
 
-  .carousel-control-previous {
-    position: absolute;
-    bottom: 80px;
-    right:220px;
-    background-color: transparent;
-    border: none;
-  }
-  .carousel-control-nextb {
-    position: absolute;
-    bottom: 80px;
-    right: 32px;
-    background-color: transparent;
-    border: none;
-  }
 }
-.carousel-item {
-  position: relative;
 
-  .carousel-info {
-    color: white;
-    position: absolute;
-    bottom: 64px;
-    right: 96px;
-    border: 2px solid white;
-    padding: 8px 16px;
-  }
+.carousel-project {
+  height: 400px;
+
+}
 
 
+.project-carousel-img {
+  height: 400px;
+  margin: 0 auto;
 }

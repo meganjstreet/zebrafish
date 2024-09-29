@@ -1,12 +1,33 @@
 .container-footer {
   color: white;
-  background: $black;
+  background: #151616;
+
 
   .container-footer-content {
+    padding: 32px;
+    padding-bottom: 0px;
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: start;
     color: white;
+
+
+
+  }
+  i {
+    margin-right: 16px;
+  }
+
+
+}
+
+.footer-location {
+  display: flex;
+  align-items: start;
+  p {
+    line-height: 1.2;
+    margin: 0px;
+
   }
 
 }

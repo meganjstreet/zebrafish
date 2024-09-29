@@ -18,5 +18,5 @@ Rails.application.routes.draw do
   get 'pages/partials/:name', to: 'pages#partials'
   get 'portfolio', to: 'pages#portfolio', as: 'portfolio'
   get 'about', to: 'pages#about', as: 'about'
-  get 'media', to: 'pages#media', as: 'media'
+  get 'contact', to: 'pages#contact', as: 'contact'
 end

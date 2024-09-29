@@ -15,6 +15,6 @@
   <%= f.input :project_images, as: :file, input_html: { multiple: true } %>
   <%= f.input :main_image, as: :file %>
   <%= f.input :client_logo, as: :file %>
-  <%= f.input :video_url %>
+  <%= f.input :video_url, label: "Vimeo ID" %>
   <%= f.button :submit, class: "btn btn-primary text-white" %>
 <% end %>

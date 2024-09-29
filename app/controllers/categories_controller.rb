@@ -17,6 +17,7 @@ class CategoriesController < ApplicationController
     @category = Category.find(params[:id])
     @projects = @category.projects
     @featured_projects = Project.where(featured: true)
+   
   end
 
   private

@@ -1,28 +1,32 @@
-<nav class="navbar navbar-dark sticky-top">
+<nav class="navbar navbar-dark sticky-top px-5">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/">ZEBRAFISH</a>
+    <%= link_to root_path, class: "navbar-brand", data: {turbo: false} do %>
+      <%= image_tag 'logo-type', class: "navbar-logo" %>
+    <% end %>
     <%= image_tag 'logo-mark', class: "logo" %>
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarknavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="offcanvas bg-black offcanvas-top text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+    <div class="offcanvas bg-black offcanvas-top text-bg-dark px-5" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
       <div class="offcanvas-header">
-        <h5 class="offcanvas-brand" id="offcanvasDarkNavbarLabel">
-        <%= image_tag 'logo-mark', class: "logo" %>
-        </h5>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
         <div class="container-nav" data-controller="header">
-          <div id="partial-frame">
-          </div>
-          <div class="container-nav-links">
-            <p class="nav-link-white" data-action="mouseover->header#loadPartial" data-url="/pages/partials/about"><%= link_to "WHO ARE WE", about_path %></p>
-            <p class="nav-link-white" data-action="mouseover->header#loadPartial" data-url="/pages/partials/portfolio"><%= link_to "PORTFOLIO", portfolio_path %></p>
-            <p class="nav-link-white" data-action="mouseover->header#loadPartial" data-url="/pages/partials/media"><%= link_to "ZEBRAFISH MEDIA", media_path %></p>
-            <%# <p class="nav-link-white" data-action="mouseover->header#loadPartial" data-url="/pages/partials/contact"> CONTACT </p> %>
-          </div>
-        </div>
+  <div id="partial-frame"></div>
+  <div class="container-nav-links">
+    <p class="nav-link-white"
+       data-action="mouseenter->header#loadPartial mouseleave->header#unbold"
+       data-url="/pages/partials/about"><%= link_to "WHO ARE WE", about_path %></p>
+    <p class="nav-link-white"
+       data-action="mouseenter->header#loadPartial mouseleave->header#unbold"
+       data-url="/pages/partials/portfolio"><%= link_to "PORTFOLIO", portfolio_path %></p>
+    <p class="nav-link-white"
+       data-action="mouseenter->header#loadPartial mouseleave->header#unbold"
+       data-url="/pages/partials/contact"><%= link_to "CONTACT", contact_path %></p>
+  </div>
+</div>
+
       </div>
     </div>
   </div>

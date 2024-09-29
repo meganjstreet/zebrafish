@@ -11,6 +11,12 @@ class PagesController < ApplicationController
     @categories = Category.all
   end
 
+  def contact
+  end
+
+  def about
+  end
+
   def partials
     render partial: params[:name]
   end

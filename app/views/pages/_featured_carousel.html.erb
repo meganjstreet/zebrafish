@@ -1,22 +1,64 @@
-<div id="carouselExample" class="carousel slide">
+<div id="carouselExample" class="carousel carousel-featured slide" data-bs-ride="carousel">
+
   <div class="carousel-inner carousel-container">
     <div class="carousel-item active">
       <%= cl_image_tag projects.first.main_image.key, class: "d-block w-100 carousel-img" %>
-      <p class="carousel-info"><%= projects.first.client %><%= projects.first.category.name %></p>
+      <div class="carousel-project-caption d-none">
+        <p><%= projects.first.client %> | <%= projects.first.category.name %></p>
+      </div>
     </div>
     <% projects[1..].each do |project| %>
       <div class="carousel-item">
         <%= cl_image_tag project.main_image.key, class: "d-block w-100 carousel-img" %>
-        <p class="carousel-info"><%= project.client %> | <%= project.category.name %></p>
+        <div class="carousel-project-caption d-none">
+        <p><%= project.client %> | <%= project.category.name %></p>
+      </div>
       </div>
     <% end %>
   </div>
-  <button class="carousel-control-previous" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
   </button>
-  <button class="carousel-control-nextb" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var carousel = document.getElementById('carouselExample');
+  var captions = document.querySelectorAll('.carousel-project-caption');
+
+  // Hide caption when the slide starts
+  carousel.addEventListener('slide.bs.carousel', function (event) {
+    var activeItem = event.relatedTarget;
+    var activeCaption = activeItem.querySelector('.carousel-project-caption');
+
+    // Hide the current caption immediately
+    captions.forEach(function (caption) {
+      caption.classList.add('d-none');
+    });
+  });
+
+  // Show the caption after the slide transition is complete
+  carousel.addEventListener('slid.bs.carousel', function (event) {
+    var activeItem = event.relatedTarget;
+    var activeCaption = activeItem.querySelector('.carousel-project-caption');
+
+    // Show the caption of the active slide
+    if (activeCaption) {
+      activeCaption.classList.remove('d-none');
+      activeCaption.classList.add('fade-in');
+    }
+  });
+
+  // Initially show the caption for the first active slide
+  var firstCaption = carousel.querySelector('.carousel-item.active .carousel-project-caption');
+  if (firstCaption) {
+    firstCaption.classList.remove('d-none');
+  }
+});
+
+</script>

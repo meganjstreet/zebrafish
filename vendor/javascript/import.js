@@ -1,0 +1,2 @@
+import r from"fs";import e from"path";var t={};t=function(){var t=r,n=e;return function importFile(r,e){e=e||{};var i=n.dirname(r),o=n.resolve(r);if(!t.existsSync(r)||e[o])return"";e[o]=1;return t.readFileSync(r).toString().replace(/^(?:(?!\/[\/*]))([ \t]*)(.*)import [\"\'](.+)[\"\'];(?![^\*]+\*\/)/gm,(function(r,t,o,a){return t+o+importFile(n.resolve(i,a+".js"),e).replace(/\n/g,"\n"+t)}))}}();var n=t;export default n;
+

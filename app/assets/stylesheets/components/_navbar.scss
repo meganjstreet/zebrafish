@@ -1,4 +1,6 @@
 .navbar {
+
+
   justify-content: space-between;
   background: $black;
   background-color: rgba(0, 0, 0, 0.6);
@@ -6,31 +8,53 @@
   padding: 0px;
   padding-top: 24px;
 
+  .navbar-logo {
+    width: 140px;
+  }
+
+  .container-fluid {
+    margin: 0px;
+    padding: 0px;
+    position: relative;
 
 
+  }
   .logo {
     height: 28px;
     width: auto;
-    align-self: end;
-    padding-bottom: 4px;
+    padding-bottom: 6px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .navbar-brand {
-    align-self: end;
     padding: 0px;
     line-height: 1;
-    padding-bottom: 4px;
+    padding-bottom: 6px;
+    margin: 0px;
   }
 
   .navbar-toggler {
     align-self: end;
     border: none;
-    padding: 0px;
+    padding: 2px;
+
+  }
+
+
+  .navbar-toggler:focus,
+  .navbar-toggler:active,
+  .navbar-toggler-icon:focus {
+      outline: none;
+      box-shadow: none;
+
   }
 
   .offcanvas, .offcanvas-top {
     height: 100vh;
-    background-color: black;
+    background-color: #151616;
+    margin-top: 58px;
 
   }
 

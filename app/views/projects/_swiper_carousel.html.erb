@@ -1,0 +1,17 @@
+<!-- Swiper carousel -->
+<div class="container-swiper" data-controller="swiper">
+  <div class="swiper">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <% project.project_images.each do |image| %>
+        <div class="swiper-slide" style="display:flex">
+          <%= cl_image_tag image.key, class: "slider-image" %>
+        </div>
+      <% end %>
+    </div>
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<%# <div data-controller="swiper">
+  <div class="swiper" data-swiper-target="container">
+    <div class="swiper-wrapper">
+      <% images.each do |image| %>
+        <div class="swiper-slide flex justify-center">
+          <%= cl_image_tag image.key, class: "object-contain rounded-xl h-96 mx-auto" %>
+        </div>
+      <% end %>
+    </div>
+    <div class="swiper-button-prev" data-swiper-target="prev">
+    </div>
+    <div class="swiper-button-next" data-swiper-target="next">
+    </div>
+  </div>
+</div> %>

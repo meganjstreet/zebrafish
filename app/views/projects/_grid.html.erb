@@ -2,7 +2,7 @@
   <div class="card-home-cards" data-controller="masonry">
     <div class="card-home-sizer"></div>
     <!-- This controls the column width -->
-    <% projects.each do |project| %>
+    <% projects.shuffle.each do |project| %>
       <%= link_to project_path(project), data: { turbo: "false" } do %>
         <div class="card-home-project">
           <%= cl_image_tag project.main_image.key %>
