@@ -6,8 +6,9 @@ export default class extends Controller {
 
   highlight(event) {
     this.categoryTargets.forEach((category) => {
-      category.classList.remove("link-bold")
+      console.log(category)
+      category.parentNode.classList.remove("text-white-underline")
     });
-    event.currentTarget.classList.add("link-bold");
+    event.currentTarget.parentNode.classList.add("text-white-underline");
   }
 }

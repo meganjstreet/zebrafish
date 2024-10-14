@@ -5,24 +5,23 @@
 
   .show-project-info {
     position: absolute;
-    bottom: 64px;
+    bottom: 120px;
     left: 64px;
     color: white;
   }
 
 
   .show-project-client {
-    font-size: 2.5em;
+    font-size: 2em;
     margin-bottom: 0;
-    line-height: 1;
-    letter-spacing: 1px;
+    line-height: 1.5;
+    font-weight: 200;
   }
 
   .show-project-name {
-    font-weight: lighter;
     margin-top: 0;
     line-height: 1;
+    font-weight: 100;
   }
 
 }
-

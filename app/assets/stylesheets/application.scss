@@ -15,8 +15,11 @@
 @import "projects/show";
 
 body {
-  background-color:#333333;
+  background-color:#1D1D1D;
+  letter-spacing: 0.15rem;
+
 }
+
 
 
 .splide__slide {
@@ -30,9 +33,16 @@ body {
 
 
 .text-bold a {
-  font-weight: 900;
+  color: #FFFFFF;
+
 }
 
 .link-bold{
-  font-weight: 900;
+  color: #FFFFFF;
+}
+
+.container-centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

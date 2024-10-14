@@ -1,0 +1,18 @@
+.container-about {
+  display: flex;
+  justify-content: space-between;
+  padding: 48px;
+
+  .text-about {
+
+    color: white;
+    padding: 48px;
+    font-weight: 200;
+    letter-spacing: 0.05;
+    background-color: #151616;
+  }
+
+  img {
+    width: 40vw;
+  }
+}

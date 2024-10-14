@@ -1,32 +1,33 @@
-<nav class="navbar navbar-dark sticky-top px-5">
-  <div class="container-fluid">
+<nav class="navbar navbar-dark sticky-top">
+  <div class="container-fluid" data-controller="navbar">
     <%= link_to root_path, class: "navbar-brand", data: {turbo: false} do %>
       <%= image_tag 'logo-type', class: "navbar-logo" %>
     <% end %>
     <%= image_tag 'logo-mark', class: "logo" %>
-    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarknavbar">
-      <span class="navbar-toggler-icon"></span>
+    <button class="navbar-toggler" type="button" data-navbar-target="menu" data-action="click->navbar#showMenu" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarknavbar">
+      <%= image_tag 'menu-bar', class: "toggler-icon" %>
     </button>
-    <div class="offcanvas bg-black offcanvas-top text-bg-dark px-5" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+    <div class="offcanvas offcanvas-top text-bg-dark px-5" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
       <div class="offcanvas-header">
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <button type="button" data-navbar-target="close" data-action="click->navbar#hideMenu" data-bs-dismiss="offcanvas" aria-label="Close">
+          <%= image_tag 'close', class:"toggler-close-icon" %>
+        </button>
       </div>
       <div class="offcanvas-body">
         <div class="container-nav" data-controller="header">
-  <div id="partial-frame"></div>
-  <div class="container-nav-links">
-    <p class="nav-link-white"
+          <div id="partial-frame"></div>
+          <div class="container-nav-links">
+            <p class="nav-link-white"
        data-action="mouseenter->header#loadPartial mouseleave->header#unbold"
-       data-url="/pages/partials/about"><%= link_to "WHO ARE WE", about_path %></p>
-    <p class="nav-link-white"
+              data-url="/pages/partials/about"><%= link_to "ABOUT US", about_path %></p>
+            <p class="nav-link-white"
        data-action="mouseenter->header#loadPartial mouseleave->header#unbold"
-       data-url="/pages/partials/portfolio"><%= link_to "PORTFOLIO", portfolio_path %></p>
-    <p class="nav-link-white"
+              data-url="/pages/partials/portfolio"><%= link_to "PORTFOLIO", portfolio_path %></p>
+            <p class="nav-link-white"
        data-action="mouseenter->header#loadPartial mouseleave->header#unbold"
-       data-url="/pages/partials/contact"><%= link_to "CONTACT", contact_path %></p>
-  </div>
-</div>
-
+              data-url="/pages/partials/contact"><%= link_to "CONTACT", contact_path %></p>
+          </div>
+        </div>
       </div>
     </div>
   </div>

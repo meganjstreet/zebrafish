@@ -1,22 +1,36 @@
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out;
+}
 
-
-
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  img {
+    height: 40px;
+  }
+}
 
 .card-home-cards {
   display: block; /* Masonry needs block display */
   margin-left: auto;
   margin-right: auto;
-  padding: 20px;
+  margin: 48px;
+  min-height: 100vh;
+  
 
 }
 
 .card-home-sizer {
-  width: calc((100% / 3) - 20px - 8px);
+  width: calc((100% / 3) - 14px );
  /* 1/3rd of the container for 3 equal columns */
 }
 
 .card-home-project {
-  width: calc((100% / 3) - 20px - 8px);
+  width: calc((100% / 3) - 14px );
  /* Ensure each project also takes up 1/3rd of the container */
   margin-bottom: 20px;
   position: relative;
@@ -26,17 +40,21 @@
     left: 16px;
     color: white;
     text-decoration: none;
-
+    font-size: 14px;
   }
 }
 
 .home-project-info {
   .project-name {
+    font-size: 12px;
     margin: 0;
-    font-weight: bold;
+    color: #FFFFFF;
+    font-weight: 300;
   }
   .project-category {
-    font-weight: 100;
+    font-size: 12px;
+    font-weight: 300;
+    color: #ffffff82;
   }
 }
 
@@ -44,4 +62,12 @@
   width: 100%;
   height: auto;
   object-fit: cover;
+}
+
+
+@media (max-width: 575.98px) {
+  .card-home-sizer, .card-home-project {
+    width: 100%;
+
+  }
 }

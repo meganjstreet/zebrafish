@@ -1,18 +1,17 @@
 <div id="carouselExample" class="carousel carousel-featured slide" data-bs-ride="carousel">
-
   <div class="carousel-inner carousel-container">
     <div class="carousel-item active">
-      <%= cl_image_tag projects.first.main_image.key, class: "d-block w-100 carousel-img" %>
+      <%= cl_image_tag projects.first.key_visual.key, class: "d-block w-100 carousel-img" %>
       <div class="carousel-project-caption d-none">
-        <p><%= projects.first.client %> | <%= projects.first.category.name %></p>
+        <p><%= projects.first.title.upcase %> | <%= projects.first.category.name.upcase %></p>
       </div>
     </div>
     <% projects[1..].each do |project| %>
       <div class="carousel-item">
-        <%= cl_image_tag project.main_image.key, class: "d-block w-100 carousel-img" %>
+        <%= cl_image_tag project.key_visual.key, class: "d-block w-100 carousel-img" %>
         <div class="carousel-project-caption d-none">
-        <p><%= project.client %> | <%= project.category.name %></p>
-      </div>
+          <p><%= project.title.upcase %> | <%= project.category.name.upcase %></p>
+        </div>
       </div>
     <% end %>
   </div>
@@ -25,40 +24,38 @@
     <span class="visually-hidden">Next</span>
   </button>
 </div>
-
 <script>
-document.addEventListener('DOMContentLoaded', function () {
-  var carousel = document.getElementById('carouselExample');
-  var captions = document.querySelectorAll('.carousel-project-caption');
+  document.addEventListener('DOMContentLoaded', function () {
+    var carousel = document.getElementById('carouselExample');
+    var captions = document.querySelectorAll('.carousel-project-caption');
 
-  // Hide caption when the slide starts
-  carousel.addEventListener('slide.bs.carousel', function (event) {
-    var activeItem = event.relatedTarget;
-    var activeCaption = activeItem.querySelector('.carousel-project-caption');
+    // Hide caption when the slide starts
+    carousel.addEventListener('slide.bs.carousel', function (event) {
+      var activeItem = event.relatedTarget;
+      var activeCaption = activeItem.querySelector('.carousel-project-caption');
 
-    // Hide the current caption immediately
-    captions.forEach(function (caption) {
-      caption.classList.add('d-none');
+      // Hide the current caption immediately
+      captions.forEach(function (caption) {
+        caption.classList.add('d-none');
+      });
     });
-  });
 
-  // Show the caption after the slide transition is complete
-  carousel.addEventListener('slid.bs.carousel', function (event) {
-    var activeItem = event.relatedTarget;
-    var activeCaption = activeItem.querySelector('.carousel-project-caption');
+    // Show the caption after the slide transition is complete
+    carousel.addEventListener('slid.bs.carousel', function (event) {
+      var activeItem = event.relatedTarget;
+      var activeCaption = activeItem.querySelector('.carousel-project-caption');
 
-    // Show the caption of the active slide
-    if (activeCaption) {
-      activeCaption.classList.remove('d-none');
-      activeCaption.classList.add('fade-in');
+      // Show the caption of the active slide
+      if (activeCaption) {
+        activeCaption.classList.remove('d-none');
+        activeCaption.classList.add('fade-in');
+      }
+    });
+
+    // Initially show the caption for the first active slide
+    var firstCaption = carousel.querySelector('.carousel-item.active .carousel-project-caption');
+    if (firstCaption) {
+      firstCaption.classList.remove('d-none');
     }
   });
-
-  // Initially show the caption for the first active slide
-  var firstCaption = carousel.querySelector('.carousel-item.active .carousel-project-caption');
-  if (firstCaption) {
-    firstCaption.classList.remove('d-none');
-  }
-});
-
 </script>
