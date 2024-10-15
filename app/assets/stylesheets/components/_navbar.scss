@@ -1,12 +1,13 @@
 .navbar {
 
-
   justify-content: space-between;
-  background: $black;
-  background-color: rgba(0, 0, 0, 0.6);
+  background: #151616;
+  background-color: #151616;
   color: white;
   padding: 0px;
-  padding-top: 24px;
+  padding: 24px 48px;
+  padding-bottom: 0px;
+  height: 56px;
 
   .navbar-logo {
     width: 140px;
@@ -20,9 +21,9 @@
 
   }
   .logo {
-    height: 28px;
+    height: 36px;
     width: auto;
-    padding-bottom: 6px;
+    bottom: 8px;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -39,8 +40,14 @@
     align-self: end;
     border: none;
     padding: 2px;
+    color: #FFFFFF;
 
   }
+
+  .toggler-icon {
+    height: 28px;
+  }
+
 
 
   .navbar-toggler:focus,
@@ -48,16 +55,33 @@
   .navbar-toggler-icon:focus {
       outline: none;
       box-shadow: none;
+      color: #FFFFFF;
 
   }
+
 
   .offcanvas, .offcanvas-top {
     height: 100vh;
     background-color: #151616;
-    margin-top: 58px;
+    background: #151616;
+    margin-top: 56px;
 
   }
 
+}
+
+.offcanvas-header {
+  .toggler-close-icon {
+
+    height: 18px;
+  }
+  button {
+    position: absolute;
+    right: 48px;
+    top: -32px;
+    background-color: transparent;
+    border: none;
+    }
 }
 
 
@@ -65,42 +89,61 @@
   display: grid;
   gap: 32px;
   grid-template-columns: 1fr 1fr;
-  height: 100%;
+  height: calc(100% - 48px - 56px);
+
+
 
   #partial-frame {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: calc(100vh - 56px - 48px - 80px);
+
+    img {
+      height: 100%;
+      width: auto;
+
+    }
+
+    .img-horizontal {
+      width: 100%;
+      height: auto;
+    }
+
 
   }
   .container-nav-links {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-  }
-
-  .nav-link-white {
-    color: white;
-    font-weight: lighter;
-    font-size: 28px;
-
+    justify-content: space-evenly;
+    align-items: start;
+    // padding: 40px;
   }
 }
 
 .nav-link-white {
+  font-weight: 200;
+  font-size: 28px;
+  display: flex;
+  justify-content: center;
+  color: #CCCCCC;
+
+  // &:hover {
+  //   color: #FFFFFF;
+  // }
   a {
+    color: #CCCCCC;
     text-decoration: none;
-    color: white;
+
+    &:hover {
+      color: #FFFFFF;
+    }
+
   }
 }
 
-#partial-frame {
-  img {
-    width: 80%;
-  }
 
-}
 
 
 .navbar-lewagon .navbar-collapse {
@@ -110,3 +153,41 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+
+
+@media (max-width: 575.98px) {
+  .navbar {
+    padding: 16px;
+
+    .logo {
+      height: 18px;
+    }
+    .navbar-logo {
+      width: 90px;
+    }
+  }
+
+
+
+  .offcanvas-header {
+
+    button {
+      position: absolute;
+      right: 16px;
+      top: -32px;
+      background-color: transparent;
+      border: none;
+      }
+  }
+
+  .container-nav {
+
+    grid-template-columns: 1fr;
+
+    #partial-frame {
+      display: none;
+    }
+  }
+
+  }

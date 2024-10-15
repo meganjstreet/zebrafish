@@ -1,8 +1,47 @@
 .home-categories {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 48px;
+  font-size: 12px;
+  letter-spacing: 0.3rem;
+  padding-bottom: 0px;
   p {
-    font-weight: 100;
+    border-bottom: 1px solid #cccccc42;
+    font-weight: 200;
+    color: #CCCCCC;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 12px;
+
+
     &:hover {
-      font-weight: bold;
+      color: #FFFFFF;
     }
   }
+
+  .text-white-underline {
+    color: #FFFFFF;
+    border-bottom: 1px solid #FFFFFF;
+    width: 100%;
+    padding-bottom: 12px;
+  }
+
+
+  a {
+    margin: 0;
+    width: 100%;
+    text-decoration: none;
+    color: #CCCCCC;
+    &:hover {
+      color: #FFFFFF;
+
+    }
+  }
+}
+
+.container-portfolio {
+  min-height: calc(100vh + 120px);
+
 }

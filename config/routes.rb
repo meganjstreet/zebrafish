@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get "contacts/create"
   devise_for :users
   root to: "pages#home"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
@@ -19,4 +20,5 @@ Rails.application.routes.draw do
   get 'portfolio', to: 'pages#portfolio', as: 'portfolio'
   get 'about', to: 'pages#about', as: 'about'
   get 'contact', to: 'pages#contact', as: 'contact'
+  resources :contacts, only: [ :create ]
 end

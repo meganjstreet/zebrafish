@@ -1,1 +1,21 @@
-<h1>ZEBRAFISH MEDIA PAGE</h1>
+<div class="container-contact">
+  <h1>LET'S WORK TOGETHER</h1>
+  <%= simple_form_for @contact do |form| %>
+    <% if @contact.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@contact.errors.count, "error") %> prohibited this contact from being sent:</h2>
+        <ul>
+          <% @contact.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <%= form.input :name, label: false, placeholder: "NAME" %>
+    <%= form.input :email, as: :email, label: false, placeholder: "EMAIL" %>
+    <%= form.input :message, as: :text, label: false, placeholder: "PROJECT DESCRIPTION", input_html: { style: "height: 12rem;" } %>
+    <div class="container-centered">
+      <%= form.button :submit, "SUBMIT" %>
+    </div>
+  <% end %>
+</div>

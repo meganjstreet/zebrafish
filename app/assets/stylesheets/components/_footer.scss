@@ -1,6 +1,8 @@
 .container-footer {
   color: white;
   background: #151616;
+  font-weight: 300;
+  font-size: 12px;
 
 
   .container-footer-content {
@@ -9,13 +11,28 @@
     display: flex;
     justify-content: space-evenly;
     align-items: start;
-    color: white;
+    color: #CCCCCC;
+    flex-wrap: wrap;
 
 
 
   }
   i {
     margin-right: 16px;
+  }
+
+  .link-white {
+    text-align: center;
+    font-size: 12px;
+
+    a {
+      font-size: 14px;
+      text-decoration: none;
+      color: #CCCCCC;
+      &:hover {
+        color: #FFFFFF;
+      }
+    }
   }
 
 

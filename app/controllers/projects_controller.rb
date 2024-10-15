@@ -1,4 +1,5 @@
 class ProjectsController < ApplicationController
+  skip_before_action :authenticate_user!, only: [ :show ]
   def new
     @project = Project.new
   end
@@ -19,6 +20,6 @@ class ProjectsController < ApplicationController
   private
 
   def project_params
-    params.require(:project).permit(:name, :campaign, :media_type, :client, :featured, :details, :summary, :services_rendered, :director, :photographer, :videographer, :producer, :category_id, :main_image, :client_logo, :video_url, project_images: [] )
+    params.require(:project).permit(:name, :campaign, :media_type, :client, :featured, :details, :summary, :services_rendered, :director, :photographer, :videographer, :producer, :category_id, :key_visual, :client_logo, :video_url, :title, :subtitle, project_images: [] )
   end
 end

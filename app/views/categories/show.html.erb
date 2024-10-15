@@ -2,12 +2,13 @@
   <meta name="turbo-refresh-method" content="morph">
   <meta name="turbo-refresh-scroll" content="preserve">
 <% end %>
-
 <div data-controller="categories-list">
-<div class="home-categories">
-  <% @categories.each do |category| %>
-    <p><%= link_to category.name.upcase, category, data: { turbo_frame: :project_grid, turbo_action: :advance, categories_list_target: "category", action:"click->categories-list#highlight"  } %></p>
-  <% end %>
-</div>
-<%= render 'projects/grid', projects: @projects %>
+  <div class="home-categories">
+    <% @categories.each do |category| %>
+      <p><%= link_to category.name.upcase, category, data: { turbo_frame: :project_grid, turbo_action: :advance, categories_list_target: "category", action:"click->categories-list#highlight"  } %></p>
+    <% end %>
+  </div>
+  <div class="grid-container">
+    <%= render 'projects/grid', projects: @projects %>
+  </div>
 </div>

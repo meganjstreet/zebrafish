@@ -1,0 +1,58 @@
+.container-contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 267px - 56px); // fullscreen - footer height - navbar height
+
+  h1 {
+    font-size: 16px;
+    font-weight: 200;
+    color: #FFFFFF;
+  }
+
+  form {
+    margin-top: 24px;
+    width: 50%;
+    font-size: 14px;
+
+  }
+
+  .form-control::placeholder {
+    color: white;
+    font-family: $body-font;
+    font-weight: 100;
+    font-size: 14px;
+
+
+  }
+
+  .form-control {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    border-radius: 0px;
+    color: #FFFFFF;
+    font-family: $body-font;
+    letter-spacing: 0.1rem;
+    font-weight: 100;
+    font-size: 14px;
+    &:active,&:focus {
+      background-color: #151616;
+      box-shadow: none;
+      border: none;
+      color: #FFFFFF;
+    }
+  }
+
+  .btn {
+    border: 1px solid white;
+    color: white;
+    margin: 0 auto;
+    font-family: $body-font;
+    font-weight: 2ca00;
+    letter-spacing: 0.1rem;
+    font-size: 14px;
+    margin-top: 24px;
+  }
+}

@@ -1,4 +1,5 @@
 class CategoriesController < ApplicationController
+  skip_before_action :authenticate_user!, only: [ :show ]
   def new
     @category = Category.new
   end
@@ -17,7 +18,7 @@ class CategoriesController < ApplicationController
     @category = Category.find(params[:id])
     @projects = @category.projects
     @featured_projects = Project.where(featured: true)
-   
+
   end
 
   private
