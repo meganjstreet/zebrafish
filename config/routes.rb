@@ -20,5 +20,6 @@ Rails.application.routes.draw do
   get 'portfolio', to: 'pages#portfolio', as: 'portfolio'
   get 'about', to: 'pages#about', as: 'about'
   get 'contact', to: 'pages#contact', as: 'contact'
+  get 'admin', to: 'pages#admin', as: 'admin'
   resources :contacts, only: [ :create ]
 end

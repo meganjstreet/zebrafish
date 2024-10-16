@@ -1,14 +1,14 @@
 <%= simple_form_for (project) do |f| %>
-  <%= f.input :name %>
+  <%= f.input :name, label: "Project Name" %>
   <%= f.input :title %>
   <%= f.input :subtitle %>
-  <%= f.input :media_type %>
-  <%= f.input :client %>
+  <%= f.input :key_visual, as: :file %>
   <%= f.input :featured, as: :boolean %>
   <%= f.association :category, collection: Category.all, label: "Pick a category", prompt: "Select a Category" %>
   <%= f.input :project_images, as: :file, input_html: { multiple: true } %>
-  <%= f.input :key_visual, as: :file %>
-  <%= f.input :client_logo, as: :file %>
   <%= f.input :video_url, label: "Vimeo ID" %>
+  <%= f.input :media_type %>
+  <%= f.input :client %>
+  <%= f.input :client_logo, as: :file %>
   <%= f.button :submit, class: "btn btn-primary text-white" %>
 <% end %>

@@ -18,6 +18,9 @@ class PagesController < ApplicationController
   def about
   end
 
+  def admin
+  end
+
   def partials
     render partial: params[:name]
   end

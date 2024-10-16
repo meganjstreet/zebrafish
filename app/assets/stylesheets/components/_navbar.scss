@@ -1,8 +1,8 @@
 .navbar {
 
   justify-content: space-between;
-  background: #151616;
-  background-color: #151616;
+  background: rgba(21, 22, 22, 0.15);
+  background-color: rgba(21, 22, 22, 0.15);
   color: white;
   padding: 0px;
   padding: 24px 48px;
@@ -60,7 +60,7 @@
   }
 
 
-  .offcanvas, .offcanvas-top {
+  .offcanvas, .offcanvas-top{
     height: 100vh;
     background-color: #151616;
     background: #151616;
@@ -68,9 +68,20 @@
 
   }
 
+  .offcanvas-body {
+    background-color: #151616;
+    background: #151616;
+
+
+  }
+
 }
 
+
+
 .offcanvas-header {
+  background-color: #151616;
+  background: #151616;
   .toggler-close-icon {
 
     height: 18px;
@@ -87,9 +98,11 @@
 
 .container-nav {
   display: grid;
-  gap: 32px;
+  gap: 48px;
   grid-template-columns: 1fr 1fr;
   height: calc(100% - 48px - 56px);
+  background-color: #151616;
+  background: #151616;
 
 
 

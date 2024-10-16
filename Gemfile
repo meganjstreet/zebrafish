@@ -47,8 +47,6 @@ gem 'mini_magick'
 gem 'ruby-vips', '~> 2.2', '>= 2.2.2'
 gem 'masonry-rails'
 
-
-
 group :development, :test do
   gem "dotenv-rails"
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
